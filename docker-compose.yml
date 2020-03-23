@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  backend:
+    container_name: webapi
+    build:
+      context: ./backend
+    env_file:
+      - ./environ/backend/webapi.env
+    volumes:
+      - ./backend:/webapi
